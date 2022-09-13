@@ -15,6 +15,8 @@
     --icon-social-cl:#AFB1B8;
 
     /*Others*/
+    --transition-time: 250ms;
+    --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page {
@@ -27,6 +29,7 @@
 .link {
     text-decoration: none;
     color: currentColor;
+    transition: color var(--transition-time) var(--transition-cubic);
 }
 .list {
     list-style: none;
@@ -78,6 +81,7 @@ ul {
 .header{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid #ececec;
+    
 }
 .header-container,
 .main-nav {
@@ -295,6 +299,8 @@ color: var(--basic-blue);
     border-radius: 4px;
     color: var(--icon-social-cl);
     cursor: pointer;
+    transition: color var(--transition-time) var(--transition-cubic);
+    transition: border-color color var(--transition-time) var(--transition-cubic);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -319,6 +325,8 @@ color: var(--basic-blue);
     border-radius: 50%;
     color: var(--icon-social-cl);
     cursor: pointer;
+    transition: color var(--transition-time) var(--transition-cubic);
+    transition: background-color var(--transition-time) var(--transition-cubic);
 }
 .team-list-link:hover,
 .team-list-link:focus {
@@ -391,11 +399,14 @@ color: var(--basic-blue);
     border-radius: 50%;
     color: var(--light-txt-cl);
     background-color: rgba(255, 255, 255, 0.1);
+    transition: color var(--transition-time) var(--transition-cubic);
+    transition: background-color var(--transition-time) var(--transition-cubic);
 }
 .footer-list-link:hover,
 .footer-list-link:focus {
     color: var(--light-txt-cl);
     background-color: var(--basic-blue);
+
 }
 .footer-icon {
     fill: currentColor;
@@ -432,6 +443,10 @@ color: var(--basic-blue);
     border-radius: 4px;
     padding: 6px 22px;
     border: none;
+
+    transition: background-color var(--transition-time) var(--transition-cubic);
+    transition: color var(--transition-time) var(--transition-cubic);
+    transition: box-shadow var(--transition-time) var(--transition-cubic);
 }
 .portf-button-text:hover{
     background-color: var(--basic-blue);
@@ -451,6 +466,7 @@ color: var(--basic-blue);
 }
 .main-link {
     display: block;
+    transition: box-shadow var(--transition-cubic) var(--transition-time);
 }
 .main-link:hover,
 .main-link:focus {
