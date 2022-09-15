@@ -154,6 +154,19 @@ color: var(--basic-blue);
 .footer-logo-text {
     color: var(--light-txt-cl);
 }
+.header-link {
+    position: relative;
+}
+.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--basic-blue);
+    border-radius: 2px;
+}
 
 
 /*main*/
@@ -232,7 +245,7 @@ color: var(--basic-blue);
     
 }
 
-/* Team */
+/* Gallery */
 
 .section-gallery{
     padding-top: 0;
@@ -252,6 +265,28 @@ color: var(--basic-blue);
 .section-team {
     background-color: #F5F4FA;
 }
+.gallery-tumb {
+    position: relative;
+}
+.gallery-tumb-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    letter-spacing: 0.03em;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--light-txt-cl);
+}
+
+/* Team */
 
 .gallery-list,
 .team-list {
@@ -472,6 +507,38 @@ color: var(--basic-blue);
 .main-link:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+.main-tumb {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: transform var(--transition-time);
+}
+.main-link:hover .overlay {
+    transform: translateY(0);
+}
+.overlay-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28/18);
+    letter-spacing: 0.03em;
+    color: var(--light-txt-cl);
+}
+
 
 .main-list-info {
     padding: 20px 24px;
